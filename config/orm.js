@@ -1,7 +1,9 @@
 var db = require("./connection");
 
-
 var orm = {
+  all: function(tableInput, cb) {
+
+  },
   eat: function(tableInput, cb) {
     db.query(`UPDATE burgers set ? where ?`, [
       {
@@ -22,7 +24,6 @@ var orm = {
       if (err){
         throw err;
       }
-
       cb(result);
     });
   }
