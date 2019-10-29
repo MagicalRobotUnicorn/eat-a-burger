@@ -14,4 +14,12 @@ var db = mysql.createConnection({
   database: "burger_db"
 });
 
-export { db }
+db.connect(function(err) {
+  if (err){
+    console.log("error connecting: " + err.stack);
+    return;
+  }
+  console.log("connected as id " + db.threadId);
+});
+
+module.exports = db;
