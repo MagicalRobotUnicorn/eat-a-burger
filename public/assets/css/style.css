@@ -1,24 +1,38 @@
-/* <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Sacramento|Special+Elite&display=swap" rel="stylesheet">
-
-font-family: 'Special Elite', cursive;
-font-family: 'Sacramento', cursive;
-font-family: 'EB Garamond', serif; */
-
-#burgerImage {
+.container {
   margin-left: auto;
   margin-right: auto;
+}
+#burgerImage {
+  margin-left: 33%;
 }
 
 #heading {
   font-family: 'Special Elite', cursive;
-  font-size: 700%;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 7rem;
+  margin-left: 10%;
+  /* margin-right: 50%; */
 }
 
 #subheading {
   font-family: 'Sacramento', cursive;
   font-size: 280%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 10%;
+  margin-bottom: 5%;
+}
+
+#inputRow {
+  margin-left: 18%;
+  margin-bottom: 3%;
+}
+
+#tableRow {
+  margin-left: 7%;
+}
+
+.innerButtons {
+  margin-left: 10%;
+}
+
+table {
+  font-family: 'EB Garamond', serif;
 }

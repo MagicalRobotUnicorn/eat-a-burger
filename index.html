@@ -15,64 +15,75 @@
 
 <body>
   <center>
-  <div class="container">
-    <div class="row">
-      <div class="col-6" id="imageCol">
-        <img src="public/assets/img/burger.jpg" id="burgerImage">
+    <div class="container">
+      <div class="row">
+        <div class="col-6" id="imageCol">
+          <img src="public/assets/img/burger.jpg" id="burgerImage">
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-10" d-flex justify-content-center>
-        <h1 id="heading">Eat 'Da Burger</h1>
+      <div class="row">
+        <div class="col-10" d-flex justify-content-center>
+          <h1 id="heading">Eat 'Da Burger</h1>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-8">
-        <h1 id="subheading">Make 'da burger, eat 'da burger, love the burger!</h3>
+      <div class="row">
+        <div class="col-10">
+          <h1 id="subheading">Make 'da burger, eat 'da burger, love 'da burger!</h3>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-5">
-        <table class="table table-dark">
-          <thead>
-            <tr>
-              <th scope="col">Burger Name</th>
-              <th scope="col">Wanna Eat It?</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Bacon Cheese Burger</th>
-              <td>Eat it!</td>
-            </tr>
-            <tr>
-              <th scope="row">Veggie Burger</th>
-              <td>Eat it!</td>
-            </tr>
-          </tbody>
-        </table>
+      <form>
+        <div class="row" id="inputRow">
+          <div class="form-group col-5">
+            <input class="form-control" type="text" placeholder="Type Burger Name Here">
+          </div>
+          <div class="col-3">
+            <button type="submit" class="btn btn-info">Make 'Da Burger!</button>
+          </div>
+        </div>
+      </form>
+      <div class="row" id="tableRow">
+        <div class="col-5">
+          <table class="table table-hover">
+            <thead class="tableHeading">
+              <tr>
+                <th scope="col">Burger Name</th>
+                <th scope="col">Wanna Eat It?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Bacon Cheese Burger</th>
+                <td><button type="button" class="btn btn-sm btn-outline-info innerButtons">Eat it!</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Veggie Burger</th>
+                <td><button type="button" class="btn btn-sm btn-outline-info innerButtons">Eat it!</button>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-5">
+          <table class="table table-hover">
+            <thead class="tableHeading">
+              <tr>
+                <th scope="col">Burger Name</th>
+                <th scope="col">Wanna Eat It?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Bacon Cheese Burger</th>
+                <td><button type="button" class="btn btn-sm btn-outline-info innerButton">Eat it!</button>
+              </tr>
+              <tr>
+                <th scope="row">Veggie Burger</th>
+                <td><button type="button" class="btn btn-sm btn-outline-info innerButton">Eat it!</button>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div class="col-5">
-        <table class="table table-dark">
-          <thead>
-            <tr>
-              <th scope="col">Burger Name</th>
-              <th scope="col">Wanna Eat It?</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Bacon Cheese Burger</th>
-              <td>Eat it!</td>
-            </tr>
-            <tr>
-              <th scope="row">Veggie Burger</th>
-              <td>Eat it!</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
 </body>
 
 </html>
