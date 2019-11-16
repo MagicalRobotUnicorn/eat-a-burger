@@ -6,14 +6,19 @@
     </tr>
   </thead>
   <tbody>
+    {{#if wholeBurgers}}
+    {{#each wholeBurgers}}
     <tr>
-      <th scope="row">Bacon Cheese Burger</th>
-      <td><button type="button" class="btn btn-sm btn-outline-info innerButtons">Eat it!</button>
+      <th scope="row">{{this.burger_name}}</th>
+      <td><button type="button" class="btn btn-sm btn-outline-info innerButtons eatburger" data-id="{{this.burger_id}}">Eat
+          it!</button>
       </td>
     </tr>
-    <tr>
-      <th scope="row">Veggie Burger</th>
-      <td><button type="button" class="btn btn-sm btn-outline-info innerButtons">Eat it!</button>
-    </tr>
+    {{/each}}
+    {{else}}
+    <td>
+      Better Make 'da Burgers!
+    </td>
+    {{/if}}
   </tbody>
 </table>

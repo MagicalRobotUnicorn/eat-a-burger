@@ -6,9 +6,19 @@ router.get("/", function (req, res) {
   burger.selectAll(function (data) {
     var handleObject = {
       // seperate data for the consumed and unconsumed burgers
-      burgers: data
+      wholeBurgers: [],
+      eatenBurgers: []
     };
-    console.log(handleObject);
+
+    for (var i = 0; i < data.length; i++){
+      if (data[i].devoured === 0) {
+        handleObject.wholeBurgers.push(data[i]);
+      }
+      else {
+        handleObject.eatenBurgers.push(data[i]);
+      }
+    }
+    console.log(handleObject.wholeBurgers);
     res.render("index", handleObject);
   });
 });
@@ -27,6 +37,7 @@ router.put("/api/burgers/:id", function (req, res) {
   var condition = `id = ${req.params.id}`;
 
   console.log("Id of burger eaten: ", condition);
+  console.log(req);
 
   burger.updateOne({
     devoured: req.body.devoured

@@ -6,17 +6,17 @@ var burger = {
       cb(res);
     });
   },
-  updateOne: function(table, objColVals, condition, cb){
-    orm.eat("burgers", objColVals, condition, function(res){
+  updateOne: function(objColVals, condition, cb){
+    orm.updateOne("burgers", objColVals, condition, function(res){
       cb(res);
     });
   },
-  insertOne: function(){
-    orm.create("burgers", cols, vals, function(res){
+  insertOne: function(cols, vals, cb){
+    orm.insertOne("burgers", cols, vals, function(res){
       cb(res);
     });
   },
-  deleteOne: function(table, condition, cb){
+  deleteOne: function(condition, cb){
     orm.delete("burgers", condition, function(){
       cb(res);
     });

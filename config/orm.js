@@ -8,18 +8,23 @@ function createQmarks(num){
   return arr.toString();
 }
 
-function translateSql(obj) {
+function objToSql(ob) {
   var arr = [];
-  for (var key in ob){
+
+  // loop through the keys and push the key/value as a string int arr
+  for (var key in ob) {
     var value = ob[key];
-    if (Object.hasOwnPropert.call(ob, key)) {
-      if (typeof value === "string" && value.indexOf(" ") >= 0){
+    // check to skip hidden properties
+    if (Object.hasOwnProperty.call(ob, key)) {
+      // if string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
+      if (typeof value === "string" && value.indexOf(" ") >= 0) {
         value = "'" + value + "'";
       }
+      // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
+      // e.g. {sleepy: true} => ["sleepy=true"]
       arr.push(key + "=" + value);
     }
   }
-  return arr.toString();
 }
 
 var orm = {
@@ -44,7 +49,7 @@ var orm = {
     });
   },
   updateOne: function(table, objColVals, condition, cb){
-    var dbQuery = "UPDATE " + table + " SET " +translateSql(objColVals) + "WHERE " + condition;
+    var dbQuery = "UPDATE " + table + " SET " + objToSql(objColVals) + "WHERE " + condition;
 
     db.query(dbQuery, function(err, res){
       if (err){

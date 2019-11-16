@@ -1,51 +1,38 @@
-{{!-- Render the eaten/uneaten burgers as partials
-  * Get routes for eaten/uneaten
-
-Post route for inserting new burger
-  * Form
-
-Update routes for eating a burger
-  * button adjacent to each uneaten burger --}}
-
 <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-6" id="imageCol">
-          <img src="public/assets/img/burger.jpg" id="burgerImage">
+  <div class="container">
+    <div class="row">
+      <div class="col-6" id="imageCol">
+        <img src="public/assets/img/burger.jpg" id="burgerImage">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-10" d-flex justify-content-center>
+        <h1 id="heading">Eat 'Da Burger</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-10">
+        <h1 id="subheading">Make 'da burger, eat 'da burger, love 'da burger!</h3>
+      </div>
+    </div>
+    <form class="create-form">
+      <div class="row" id="inputRow">
+        <div class="form-group col-5">
+          <input class="form-control" id="newburger" type="text" placeholder="Type Burger Name Here">
+        </div>
+        <div class="col-3">
+          <button type="submit" class="btn btn-info">Make 'Da Burger!</button>
         </div>
       </div>
-      <div class="row">
-        <div class="col-10" d-flex justify-content-center>
-          <h1 id="heading">Eat 'Da Burger</h1>
-        </div>
+    </form>
+    <div class="row" id="tableRow">
+      <div class="col-5">
+        {{>wholeBurgers}}
       </div>
-      <div class="row">
-        <div class="col-10">
-          <h1 id="subheading">Make 'da burger, eat 'da burger, love 'da burger!</h3>
-        </div>
+      <div class="col-5">
+        {{>eatenBurgers}}
       </div>
-      <form>
-        <div class="row" id="inputRow">
-          <div class="form-group col-5">
-            <input class="form-control" type="text" placeholder="Type Burger Name Here">
-          </div>
-          <div class="col-3">
-            <button type="submit" class="btn btn-info">Make 'Da Burger!</button>
-          </div>
-        </div>
-      </form>
-      <div class="row" id="tableRow">
-        <div class="col-5">
-          {{!-- Begin Full Burger Partial --}}
-          {{>wholeBurgers}}
-          {{!-- End Full Burger Partial --}}
-        </div>
-        <div class="col-5">
-          {{!-- Begin Eaten Burger Partial --}}
-          {{>eatenBurgers}}
-          {{!-- End Eaten Burger Partial --}}
-        </div>
-      </div>
+    </div>
 </body>
 
 </html>
