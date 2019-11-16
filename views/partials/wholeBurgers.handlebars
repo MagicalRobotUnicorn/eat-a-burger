@@ -2,7 +2,7 @@
   <thead class="tableHeading">
     <tr>
       <th scope="col">Burger Name</th>
-      <th scope="col">Wanna Delete It?</th>
+      <th scope="col">Wanna Eat It?</th>
     </tr>
   </thead>
   <tbody>
@@ -10,7 +10,7 @@
     {{#each wholeBurgers}}
     <tr>
       <th scope="row">{{this.burger_name}}</th>
-      <td><button type="button" class="btn btn-sm btn-outline-info innerButtons eatburger" data-id="{{this.burger_id}}">Delete it!</button>
+      <td><button type="button" class="btn btn-sm btn-outline-info innerButtons eatburger" data-id="{{this.burger_id}}">Eat it!</button>
       </td>
     </tr>
     {{/each}}

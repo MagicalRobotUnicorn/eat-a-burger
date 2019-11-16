@@ -52,12 +52,12 @@ router.put("/api/burgers/:id", function (req, res) {
 });
 
 router.delete("/api/burgers/:id", function (req, res) {
-  var condition = `id = ${req.params.id}`;
+  var condition = `burger_id = ${req.params.id}`;
 
   console.log("condition", condition);
 
   burger.deleteOne(condition, function (result) {
-    if ((result, changedRows === 0)) {
+    if ((result.changedRows === 0)) {
       return res.status(404).end();
     }
     else {
