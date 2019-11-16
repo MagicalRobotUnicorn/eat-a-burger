@@ -67,6 +67,8 @@ var orm = {
   }
 
 }
+module.exports = orm;
+
 // var orm = {
 //   all: function(tableInput, cb) {
 

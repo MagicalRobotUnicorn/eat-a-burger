@@ -1,5 +1,6 @@
 var express = require("express");
 var handlebars = require("express-handlebars");
+var path = require('path');
 
 var mysql = require("mysql");
 
@@ -13,9 +14,11 @@ app.use(express.static("./app/public"));
 
 app.engine("handlebars", handlebars({
   defaultLayout: "main",
-  extname: 'hbs',
+  extname: '.hbs',
   partialsDir: `${__dirname}/views/partials`
 }));
+app.set('views', path.join(__dirname, 'views'));
+
 app.set("view engine", "handlebars");
 
 var routes = require("./controllers/burger_controller.js");
