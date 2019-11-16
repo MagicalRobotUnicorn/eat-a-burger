@@ -34,15 +34,15 @@ router.post("/api/burgers", function (req, res) {
 });
 
 router.put("/api/burgers/:id", function (req, res) {
-  var condition = `id = ${req.params.id}`;
+  var condition = `burger_id=${req.params.id}`;
 
   console.log("Id of burger eaten: ", condition);
-  console.log(req);
+  // console.log(req);
 
   burger.updateOne({
     devoured: req.body.devoured
   }, condition, (result) => {
-    if ((result, changedRows === 0)) {
+    if ((result.changedRows === 0)) {
       return res.status(404).end();
     }
     else {
@@ -65,7 +65,5 @@ router.delete("/api/burgers/:id", function (req, res) {
     }
   });
 });
-
-
 
 module.exports = router;

@@ -27,6 +27,14 @@ function objToSql(ob) {
   }
 }
 
+function worseSql(ob){
+  for (var key in ob){
+    var returnValue = key + "=" + ob[key];
+  }
+
+  return returnValue;
+}
+
 var orm = {
   selectAll: function(table, cb){
     var dbQuery = "SELECT * FROM " + table + ";";
@@ -49,8 +57,9 @@ var orm = {
     });
   },
   updateOne: function(table, objColVals, condition, cb){
-    var dbQuery = "UPDATE " + table + " SET " + objToSql(objColVals) + "WHERE " + condition;
-
+    console.log(objColVals);
+    var dbQuery = "UPDATE " + table + " SET " + worseSql(objColVals) + " WHERE " + condition;
+    console.log(dbQuery);
     db.query(dbQuery, function(err, res){
       if (err){
         throw err;
