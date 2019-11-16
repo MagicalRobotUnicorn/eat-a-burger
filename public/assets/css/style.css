@@ -29,6 +29,11 @@
   margin-left: 7%;
 }
 
+.tableTitle {
+  font-family: 'EB Garamond', serif;
+  margin-left: 30%;
+}
+
 .innerButtons {
   margin-left: 10%;
 }
