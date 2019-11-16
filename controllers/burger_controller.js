@@ -1,9 +1,11 @@
+// var orm = require("../config/orm");
+
 var express = require("express");
 var router = express.Router();
-var orm = require("../models/burger.js");
+var burger = require("../models/burger.js");
 
 router.get("/", function(req, res){
-  burger.all(function(data){
+  burger.selectAll(function(data){
     var handleObject = {
       // seperate data for the consumed and unconsumed burgers
       devouredBurgers : data.devoured,
@@ -35,3 +37,5 @@ router.put("/api/burgers/:id", function(req, res) {
     
   });
 });
+
+module.exports = router;

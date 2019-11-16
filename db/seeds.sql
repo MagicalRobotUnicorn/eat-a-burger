@@ -6,3 +6,5 @@ values ("Bacon Cheese Burger", false);
 INSERT into burgers(burger_name, devoured)
 values ("Veggie Burger", false);
 
+INSERT into burgers(burger_name, devoured)
+values ("Blue Cheese Burger", false);

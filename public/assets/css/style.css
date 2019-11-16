@@ -3,25 +3,25 @@
   margin-right: auto;
 }
 #burgerImage {
-  margin-left: 33%;
+  margin-left: 37%;
 }
 
 #heading {
   font-family: 'Special Elite', cursive;
   font-size: 7rem;
-  margin-left: 10%;
+  margin-left: 12%;
   /* margin-right: 50%; */
 }
 
 #subheading {
   font-family: 'Sacramento', cursive;
   font-size: 280%;
-  margin-left: 10%;
+  margin-left: 19%;
   margin-bottom: 5%;
 }
 
 #inputRow {
-  margin-left: 18%;
+  margin-left: 20%;
   margin-bottom: 3%;
 }
 
