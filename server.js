@@ -10,13 +10,13 @@ var PORT = process.env.PORT || 8080;
 
 app.use(express.urlencoded({}));
 app.use(express.json());
-app.use(express.static("./app/public"));
+app.use("/public", express.static(path.join(__dirname, "public")));
 
 app.engine("handlebars", handlebars({
   defaultLayout: "main",
-  extname: '.hbs',
   partialsDir: `${__dirname}/views/partials`
 }));
+
 app.set('views', path.join(__dirname, 'views'));
 
 app.set("view engine", "handlebars");
